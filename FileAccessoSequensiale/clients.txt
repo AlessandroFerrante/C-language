@@ -1,0 +1,7 @@
+Account         	 Firstname                      	 Lastname                       	 Balance
+44              	 cc                             	 cc                             	 44.00
+22              	 aaa                            	 aa                             	 33.00
+444             	 ciao                           	 ciao                           	 -44.00
+357             	 ciao                           	 ciao                           	 0.00
+213             	 bye                            	 bye                            	 68.00
+324             	 bye                            	 bye                            	 0.00
