@@ -1,4 +1,4 @@
-//per avviare ./SoluzioneProvaSimulazione.exe 3
+//per avviare ./SoluzioneProvaSimulazione.exe n
 #include<stdlib.h>
 #include<stdio.h>
 #include<stdbool.h>
@@ -19,6 +19,7 @@ typedef struct node Node;
 bool insertHead(Node **head, Riga r);
 bool insertTail(Node **head, Riga r);
 bool deleteHead(Node **head);
+bool insertWords(Node **head, Riga r);
 int readN(int argc, char *argv[]);
 Node* readFile(char *name);
 void filterList(Node **head, int n);
@@ -70,7 +71,7 @@ Node *readFile(char *name)
             Riga r;
             r.count = count;
             strcpy(r.word, firstTok);
-            insertTail(head, r);
+            insertWords(head, r);
         } else {
             done = true;
         }
@@ -118,7 +119,28 @@ bool insertHead(Node **head, Riga r) {
     *head = newNode;
     return true;
 }
-
+bool insertWords(Node **head, Riga r){
+    if(*head==NULL){
+        Node* newNode=malloc(sizeof(Node));
+        newNode->data=r;
+        newNode->next= *head;
+        *head=newNode;
+        return true;
+    }
+    else{
+        Node *tail= *head;
+        while (tail->next){
+            tail=tail->next;
+        }
+        Node *newNode=malloc(sizeof(Node));
+        if(newNode==NULL)
+            return false;
+        newNode->data=r;
+        newNode->next=NULL;
+        tail->next=newNode;
+        return true;
+    }
+}
 bool insertTail(Node **head, Riga r) {
     if(*head==NULL) {
         return insertHead(head, r);
