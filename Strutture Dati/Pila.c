@@ -17,7 +17,7 @@ void printStack(StackNodePtr currentPtr);
 void instructions(void);
 
 int main(){
-    puts(">Avvio menu...");
+    puts(">Start menu...");
     instructions();
 }
 void instructions(){
@@ -44,7 +44,7 @@ void instructions(){
         case 2://effettua un pop di un valore dalla pila
             //se la pila non è vuota
             if (!isEmpty(stackPtr)){
-                printf("The popped value is %d\n", pop(&stackPtr));
+                printf("The popped value is %d\n", pop(&stackPtr));//stackPtr è la nostra pila che viene passata per riferimento 
             }
             printStack(stackPtr);
             break;
@@ -66,14 +66,14 @@ void push(StackNodePtr *topPtr, int info){
 
     //inserisci il nodo in cima alla pila
     if(newPtr != NULL){
-        (*newPtr).data= info;//inserisce i dati nel nuovo nodo
-        newPtr->nextPtr= *topPtr;//assegna il nodo puntato primo puntatore ad ogni nuovo nodo//il puntatore *topPtr è il primo in cima alla pila// se è il primo verrà fatto puntare a NULL
+        (*newPtr).data= (int*)info;//inserisce i dati nel nuovo nodo//operatore di cast necessario perchè data è un'itero di tipo puntatore e info è un'intero
+        newPtr->nextPtr= *topPtr;//assegna il nodo puntato al primo puntatore ad ogni nuovo nodo//il puntatore *topPtr è il primo in cima alla pila// se è il primo verrà fatto puntare a NULL
         *topPtr = newPtr;//il primo puntatore (*topPtr)  adesso punta al nuovo nodo
     }
     else{
         printf("%d not inserted. No memory available\n", info);
     }
-    
+
 }
 //* __________________________________________PUSH
 //***********************************************
@@ -81,10 +81,10 @@ void push(StackNodePtr *topPtr, int info){
 int pop(StackNodePtr *topPtr){
     StackNodePtr tempPtr= *topPtr;
 
-    int popValue= (*topPtr)->data;//memorizza il valore in cima 
+    int popValue= (int) topPtr->data;//memorizza il valore in cima //operatore di cast necessario perchè data è un'itero di tipo puntatore e pop è unt'intero
 
-    *topPtr= (*topPtr)->nextPtr;//prendi il puntatore del nodo in cima e assegalo a topPtr così puntaterà al secondo nodo che di conseguenza diventerà il primo
-    free(tempPtr);//libera la memoria allocata dal nodo in cima
+    *topPtr= (*topPtr)->nextPtr;//prendi il puntatore del nodo in cima(puntato infatti da topPtr) e assegalo a topPtr così puntaterà al secondo nodo che di conseguenza diventerà il primo
+    free(tempPtr);//libera la memoria allocata dal nodo precedentemente in cima
     return popValue;//ritorna il valore in cima
 }
 //* ___________________________________________POP

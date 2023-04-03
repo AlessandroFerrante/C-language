@@ -6,7 +6,8 @@ typedef struct queueNode{
     struct queueNode *nextPtr;//puntatore a queueNode
 }QueueNode;
 
-typedef QueueNode *QueueNodePtr;
+typedef QueueNode* QueueNodePtr;
+
 //prototipi di funzioni 
 void printQueue(QueueNodePtr currentPtr);
 int isEmpty(QueueNodePtr headPtr);
@@ -108,5 +109,5 @@ void printQueue(QueueNodePtr currentPtr){
     
 }
 int isEmpty(QueueNodePtr headPtr){
-    return headPtr == NULL;//ritorna 1 se la coda è vuota(quindi la testa della coda), altrimenti ritorna 0
+   return headPtr == NULL;//ritorna 1 se la coda è vuota(quindi la testa della coda), altrimenti ritorna 0
 }

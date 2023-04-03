@@ -1,4 +1,4 @@
-/*Programma per elaborazione di transizioni che legge sequensialmente 
+ /*Programma per elaborazione di transizioni che legge sequensialmente 
 un file ad accesso casuale, aggiorna i dati già scritti sul file,
 crea nuovi dati(record) da inserire nel file e cancella dati(record) dal file*/
 #include<stdio.h>
@@ -153,8 +153,7 @@ void newRecord(FILE *fPtr){
     fread(&client, sizeof(clientData), 1, fPtr);
 
     if (client.account != 0){
-        printf("Account %d already contains information.\n",account);
-    }
+     }
     else
     {
         //crea un record

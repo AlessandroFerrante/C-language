@@ -46,7 +46,7 @@ void selectionSort(int array[], size_t length){
     {
         int small= i;
         for (size_t j = 0; j < length; j++)   {
-            if (array[i]<array[small])
+            if (array[j]<array[small])
                small= j;
         }
         swap(array, i, smallest);
@@ -61,4 +61,96 @@ void swap(int array[], size_t first, size_t second){
 
 void printPass(int array, size_t length, int pass, size_t index){
 
+}
+void selectionSort(int array[], int lenght){
+    for(int i=0; i<lenght; i++){
+        int min=i;
+        
+        for(int j =i+1; j<lenght; j++){
+            if(array[min] > array[j]){
+                min= j;
+            }
+        }
+        int temp = array[i];
+        array[i]=array[min];
+        array[min]=temp;
+    }
+}
+//in ordine drecrescente
+void selectionSort(int array[], int lenght){
+    for(int i=lenght; i>=lenght;i--){
+        int max=i;
+        for(int j=i+1; j<lenght; j--){
+            if(array[max] < array[j]){
+                max=j;
+            }
+        }
+        int temp= array[i];
+        array[i]=array[max];
+        array[max]= temp;
+    }
+}
+void selectionSort(int array[], int lenght){
+    for(int i=0; i<lenght;i++){
+        int max=i;
+        for(int j= 0; j<lenght-1;j++){
+            if(array[j]>array[j+1]){
+                max=j
+            }
+            int temp=array[j];
+            array[j]=array[j+1];
+            array[j]=temp;
+        }
+    }
+
+}
+int bubbleSort(int array[], int lenght){
+    for(int i=0; i<lenght; i++){
+        for(int j=0; j<lenght-1; j++){
+            if(array[j]>array[j+1]){
+                int max= array[j];
+                array[j]=array[j+1];
+                array[j+1]=max;
+            }
+        }
+    }
+}
+
+
+void selectionSort(int array[], int lenght){
+    for(int i=0; i<lenght; i++){
+        int min=i;
+        for(int j=i+1;j<lenght;j++){
+            if(array[min]>array[j]){
+                min=j;
+            }
+        }
+        int temp= array[j];
+        array[j]=array[min];
+        array[min]= temp;
+    }
+}
+
+void insertionSort(int array[], int lenght){
+    for(int i=0; i<lenght; i++){
+        int moveItem=i;
+        int data=array[i];
+        
+        while(moveItem>0 && array[moveItem-1]>data){
+            array[moveItem]=array[moveItem-1];
+            --moveItem;
+        }
+        array[moveItem]=data;
+    }
+}
+void bubbleSort(int array[], int lenght){
+    for(int i=0; i<lenght; i++){
+        for(int j=0; j<lenght-1;j++){
+            if(array[j]>array[j+1]){
+                int hold= array[j];
+                array[j]=array[j+1];
+                array[j+1]=hold;
+            }
+        }
+    }
 }

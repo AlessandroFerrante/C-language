@@ -135,7 +135,7 @@ void filterList(NodePtr *head, int n){
     NodePtr filter= *head;
     NodePtr prev=NULL;
     while(filter){
-        RigaPtr r= &filter->data;
+        RigaPtr r= &filter->data;//si può evitare
         if (r->count<n){
             if(prev==NULL){
                 deleteHead(head);

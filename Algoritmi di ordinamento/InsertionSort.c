@@ -41,6 +41,22 @@ void insertionSort(int array[], size_t length){
         array[moveItem]=array[moveItem-1];//inserisce l'elemento maggiore al suo posto spostandolo a destra 
         --moveItem;//decrementa l'indice
     }
+    //come se fosse moveItem-1 infatti viene già decrementato nel while
     array[moveItem]=insert;//inserisci l'elemento minore al suo posto
    } 
 }
+
+/*
+void insertionSort(int array[], int lenght){
+    for(int i=1 ; i<lenght; i++){
+        int MoveItem=i;
+        int data= array[MoveItem];
+
+        while(MoveItem > 0 && array[MoveItem-1]>data){
+            arry[MoveItem]=arry[MoveItem-1];
+            --MoveItem;
+        }
+        array[MoveItem]=insert;
+    }
+}
+*/

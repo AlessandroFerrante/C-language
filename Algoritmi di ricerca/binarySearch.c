@@ -6,6 +6,7 @@ void insertionSort(int array[], size_t length);
 void selectionSort(int array[], size_t length);
 void blubbleSort(int array[],size_t length);
 void binarySearch(int array[], int key, int low, int high);
+
 int main(){
     int a[SIZE]={0};
 
@@ -86,4 +87,25 @@ void blubbleSort(int array[], size_t length){
             }
         }   
     }   
+}
+
+
+void binarySearch(int array[], int key, int low, int hight){
+    int count=0;
+    while(low<=high){
+        int middle= (low+high)/2;
+        if(array[middle] ==key){
+            printf("La chiave è stata alla posizone array[%d]",middle);
+            count++;
+        }
+        else if(array[middle]>key){
+            high=middle-1;
+        }
+        else
+            low=middle-1;
+    }    
+    if(count>0)
+        printf("La chiave è presente %d volta/e",count);
+    else
+        puts("La chiave non è presente");
 }

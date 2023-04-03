@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 struct clientData{
     int account;
     char lastName[15];
