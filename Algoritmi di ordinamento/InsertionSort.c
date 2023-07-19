@@ -53,7 +53,7 @@ void insertionSort(int array[], int lenght){
         int data= array[MoveItem];
 
         while(MoveItem > 0 && array[MoveItem-1]>data){
-            arry[MoveItem]=arry[MoveItem-1];
+            array[MoveItem]=arry[MoveItem-1];
             --MoveItem;
         }
         array[MoveItem]=insert;

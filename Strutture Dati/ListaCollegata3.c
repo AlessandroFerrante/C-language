@@ -106,11 +106,11 @@ void insert(lNodePtr *lPtr, char *newData){
             prevNode=currentNode;
             currentNode= currentNode->nextPtr;
         }
-        if(prevNode==NULL){
+        if(prevNode==NULL){//se il nodo è il primo
             newNode->nextPtr=*lPtr;
             *lPtr=newNode;
         }
-        else{
+        else{// eseguito nel momento in cui currentNode è NULL e quindi se il valore è maggiore d quello puntato da currentNode
             prevNode->nextPtr=newNode;
             newNode->nextPtr=currentNode;
         }

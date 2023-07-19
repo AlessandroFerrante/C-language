@@ -50,8 +50,12 @@ Argomenti checkArgs(int argc, char *argv[]){
         exit(0);
     }
 }
-
-
+//per n=3
+//k=9
+c
+// |1n-n-n|2n-n-n|3n-n-n|
+// |4n-n-n|5n-n-n|6n-n-n|
+// |7n-n-n|8n-n-n|9n-n-n|
 char ***allocateMatrix(int k, int N, int M){
     char ***matrice=malloc(M * sizeof(char **));
     for(size_t i= 0; i < M; i++){
