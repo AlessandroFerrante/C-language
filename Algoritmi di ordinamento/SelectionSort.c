@@ -120,7 +120,7 @@ int bubbleSort(int array[], int lenght){
 void selectionSort(int array[], int lenght){
     for(int i=0; i<lenght; i++){
         int min=i;
-        for(int j=i+1;j<lenght;j++){
+        for(int j=i+1;j<lenght-1;j++){
             if(array[min]>array[j]){
                 min=j;
             }
@@ -152,5 +152,19 @@ void bubbleSort(int array[], int lenght){
                 array[j+1]=hold;
             }
         }
+    }
+}
+
+void selectionsort(int array[], int len){
+    for(int i=0;i<len;i++){
+        int min=i;
+        for(int j=i+1;i<len-1;j++){
+            if(array[min]>array[j]){
+                min=j;
+            }
+        }
+        int hold= <array[j];
+        array[j]=array[min];
+        array[min]=hold;
     }
 }

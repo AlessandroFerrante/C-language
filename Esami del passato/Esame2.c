@@ -144,8 +144,9 @@ Parametri decodeParametri(int argc, char *argv[]){
     }
     else{
         Parametri p;
-        char *end;
-        p.n= (int) strtol(argv[1], &end,10);
+        //char *end;
+        //p.n= (int) strtol(argv[1], &end,10);
+        p.n= atoi(argv[1]);
         p.w= argv[2][0];
         if(p.n<10 || p.n>20){
             fprintf(stderr,"Errore, n deve essere un'intero tra 10 e 20 compresi");

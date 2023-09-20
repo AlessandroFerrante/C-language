@@ -79,7 +79,7 @@ double **readFile(char *filename, int n, int m) {
     }
     fclose(fp);
 
-    return X;
+    return X; 
 }
 
 void printMatrix(double **X, int n, int m, const char *name) {
@@ -141,10 +141,20 @@ void insertionSort(int *Y, int n) {
         Y[j + 1] = key;
     }
 }
-
+vois insrtionsort(int *y, int n){
+    for(int i=0; i<n;i++){
+        int data= y[i];
+        int move=i;
+        while(move>0 && y[move-1]>data){
+            y[move]=y[move-1];
+            --move;
+        }
+        y[move]=data;
+    }
+}
 int *getCumulative(int *Y, int n) {
     int *Z = (int*) malloc(n * sizeof(int));
-    Z[0] = Y[0];
+    Z[0] = Y[0];//inizializza 
     for (int i = 1; i < n; i++) {
         Z[i] = Z[i - 1] + Y[i];
     }

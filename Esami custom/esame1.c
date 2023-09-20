@@ -181,7 +181,7 @@ int main (int argc, char * argv[]){
     Param p= decodeParamaters(argc, argv);
     printf("PUNTO 1 \nFilename : %s\n", p.filename);
     NodePtr list= readInputs(p.filename);
-    printf("PUNTO 2");
+    printf("PUNTO 2");  
     printList(list);
     NodePtr LAE=NULL;
     NodePtr LFN=NULL;

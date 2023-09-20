@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<ctype.h>
+
+
+int main(int argc, char * argv[]){
+
+}
+float getMax(double **M, Inputs in, int index_riga){
+    float max=M[index_riga][0];
+    for(int j=0; j<in.m; i++){
+        if(max<M[index_riga][j]){
+            max=M[index_riga][j];
+        }
+    }
+    return max;
+
+}
+
+int *getArray(double **M, int n, int m){
+    int *Y=malloc(sizeof(int)*n);
+    for(int i=0; i<n; i++){
+        Y[i]=0;
+         for(int j=0; i<m; j++){
+            float max=getMax(M[i],in);//in è la struct vedere coice tutorato
+            float min=getMin(M[i],in):
+            if(M[i][j]>a && M[i][j]<b){
+                Y[i]++;
+            }
+         }
+    }
+}
+Parametri decodeParametri(int argc, char *argv[]){
+     if(argc!=4){
+        fprintf(stderr,"Errore i parametri passati devono essere 2");
+        exit(-1);
+    }
+    else{//dal filename inseritto come argomento con argv analizza da dopo il punto se la parate finale è .txt
+        if(strcmp(strrchr(i.filename,"."),".txt")){
+
+        };
+    }
+}

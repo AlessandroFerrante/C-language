@@ -1,0 +1,23 @@
+1 aa aa 6.000000
+2 aa aa 55.000000
+3 aca aa 158.000000
+4 aa aa 5.000000
+5 aa aa 22.800000
+LISTA
+1 aa aa 6.000
+2 aa aa 55.000
+3 aca aa 158.000
+4 aa aa 5.000
+5 aa aa 22.800
+STACK
+5 aa aa 22.800
+4 aa aa 5.000
+3 aca aa 158.000
+2 aa aa 55.000
+1 aa aa 6.000
+QUEUE
+1 aa aa 6.000000
+2 aa aa 55.000000
+3 aca aa 158.000000
+4 aa aa 5.000000
+5 aa aa 22.800000

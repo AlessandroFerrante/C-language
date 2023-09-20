@@ -16,7 +16,6 @@ typedef struct stackNode{
 
 typedef sNode* sNodePtr;
 
-
 Parametri decodeParameters(int argc, char *argv[]);
 int* readInput(int n, int L);
 char* sampleString(char * alfabeto, int h);
