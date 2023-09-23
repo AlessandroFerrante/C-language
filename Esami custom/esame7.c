@@ -33,7 +33,7 @@ Param decodeParam(int argc, char * argv[]){
         exit(1);
     }
     char *end;
-    p.n= strtol(argv[1], &end, 10);
+    p.n= (int) strtol(argv[1], &end, 10);
     if(*end){
         fprintf(stderr,"Errore, il primo parametro deve essere un intero");
         exit(1);
