@@ -20,7 +20,7 @@ extern FILE *fPtr;
 extern FILE *readPtr;
 extern FILE *writePtr;
 
-int main1(){
+int main(){
     //per consentire l'uso di due funzioni da due file diversi occorre prima modificare 
     //il nome della funzione main perchè va ad interferie con gli altri main dei file
     puts("Inserisci 1 o 2\n");
